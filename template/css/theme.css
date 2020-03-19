@@ -5017,6 +5017,7 @@ html.ie #header .header-column .header-extra-info .feature-box .feature-box-info
 	background-size: auto;
 	background-repeat: repeat;
 	background-attachment: fixed;
+	height: 300px;
 }
 
 .page-header.page-header-modern.page-header-background.page-header-background-sm {
