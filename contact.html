@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-<!-- Copied from https://preview.oklerthemes.com/porto/7.6.0/feature-headers-flat.html by Cyotek WebCopy 1.7.0.600, Tuesday, November 19, 2019, 12:13:03 PM -->
 
 <head>
 
@@ -71,7 +70,6 @@
                     <div class="header-row">
                         <div class="header-column">
                             <div class="header-row">
-<<<<<<< HEAD
                                 <div class="header-logo">
                                     <a href="index.html">
                                         <img alt="Porto" width="250" height="48" data-sticky-width="122"
@@ -125,81 +123,6 @@
                                                 </li>
                                             </ul>
                                         </nav>
-=======
-                                    <div class="header-column">
-                                            <div class="header-row">
-                                                    <div class="header-logo">
-                                                            <a href="index.html">
-                                                                    <img alt="Porto" width="250" height="48"
-                                                                            data-sticky-width="122"
-                                                                            data-sticky-height="40"
-                                                                            src="img/logo-default-141x21.png">
-                                                            </a>
-                                                    </div>
-                                            </div>
-                                    </div>
-                                    <div class="header-column justify-content-end">
-                                            <div class="header-row">
-                                                    <div
-                                                            class="header-nav header-nav-line header-nav-top-line header-nav-top-line-with-border order-2 order-lg-1">
-                                                            <div
-                                                                    class="header-nav-main header-nav-main-square header-nav-main-effect-2 header-nav-main-sub-effect-1">
-                                                                    <nav class="collapse">
-                                                                            <ul class="nav nav-pills"
-                                                                                    id="mainNav">
-                                                                                    <li class="dropdown"> <a
-                                                                                                    class="dropdown-item dropdown-toggle"
-                                                                                                    href="index.html">
-                                                                                                    Home
-                                                                                            </a>
-
-                                                                                    </li>
-                                                                                    <li
-                                                                                            class="dropdown dropdown-mega">
-                                                                                            <a class="dropdown-item dropdown-toggle"
-                                                                                                    href="about.html">
-                                                                                                    About
-                                                                                            </a>
-
-                                                                                    </li>
-                                                                                    <li class="dropdown"> <a
-                                                                                                    class="dropdown-item dropdown-toggle"
-                                                                                                    href="services.html">
-                                                                                                    Services</a>
-
-                                                                                    </li>
-                                                                                    <li class="dropdown"> <a
-                                                                                                    class="dropdown-item dropdown-toggle"
-                                                                                                    href="news.html">
-                                                                                                    News
-                                                                                            </a>
-
-                                                                                    </li>
-
-                                                                                    <li class="dropdown"> <a
-                                                                                                    class="dropdown-item dropdown-toggle"
-                                                                                                    href="resources.html">
-                                                                                                    Resources
-                                                                                            </a>
-
-                                                                                    </li>
-                                                                                    <li class="dropdown"> <a
-                                                                                                    class="dropdown-item dropdown-toggle active"
-                                                                                                    href="contact.html">
-                                                                                                    Contact</a>
-
-                                                                                    </li>
-                                                                            </ul>
-                                                                    </nav>
-                                                            </div>
-                                                            <button class="btn header-btn-collapse-nav" data-toggle="collapse"
-                                                            data-target=".header-nav-main nav">
-                                                            <i class="fas fa-bars"></i>
-                                                        </button>
-                                                    </div>
-
-                                            </div>
->>>>>>> 92702aeb55659533416fab5deae9f9c5b55c89b4
                                     </div>
                                     <button class="btn header-btn-collapse-nav" data-toggle="collapse"
                                         data-target=".header-nav-main nav">
@@ -220,7 +143,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12 align-self-center text-center">
-                            <h1>Meet the <strong>Team</strong></h1>
+                            <h1><strong>Contact Us</strong></h1>
                         </div>
 
                     </div>
@@ -325,7 +248,7 @@
 
             </div>
             <!-- Google Maps - Go to the bottom of the page to change settings and map location. -->
-            <div id="googlemaps" class="google-map mt-0" style="height: 500px;"></div>
+            <div id="map" class="google-map mt-0" style="height: 500px; margin: 0px"></div>
 
         </div>
 
@@ -428,7 +351,18 @@
 
     <!-- Theme Initialization Files -->
     <script src="js/theme.init.js"></script>
-
+   <script>
+    // Initialize and add the map
+    function initMap() {
+    var home = {lat: 51.4775856, lng: -0.0963375};
+  var map = new google.maps.Map(
+      document.getElementById('map'), {zoom: 16, center: home});
+  var marker = new google.maps.Marker({position: home, map: map});
+}
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAwrLuu_lsYWyNb_JzEIS6hH8tr1NFwhK4&callback=initMap">
+    </script>
 
 </body>
 
